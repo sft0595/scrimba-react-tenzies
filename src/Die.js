@@ -1,5 +1,4 @@
 import React from "react"
-import { nanoid } from "nanoid"
 
 export default function Die(props) {
     const styles = {
@@ -7,12 +6,12 @@ export default function Die(props) {
     }
 
     return (
-        <div 
-            className="die-face" 
+        <div
+            className="die-face"
             style={styles}
             onClick={props.holdDice}
         >
-            <h2  className="die-num">{Array.from(Array(props.value), (_, i) => <span key={i} className="dot"></span>)}</h2>
+            <h2 className="die-num">{Array.from(Array(props.value), (_, i) => <span key={i} className="dot"></span>)}</h2>
         </div>
     )
 }
